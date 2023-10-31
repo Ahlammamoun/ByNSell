@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello VesteController!{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="example-wrapper">
+
+
+    {% for veste in vestes %}
+
+ <h1>{{ veste.name }}</h1>
+
+
+      <img class="col-4 movie__poster img-thumbnail w-100" style="background-image: url({{ veste.picture }});" class="images">
+ <h1>{{ veste.genre }}</h1>
+
+    {% endfor %}
+   
+
+    This friendly message is coming from:
+    <ul>
+        <li>Your controller at <code><a href="{{ '/var/www/html/ByNSell/src/Controller/VesteController.php'|file_link(0) }}">src/Controller/VesteController.php</a></code></li>
+        <li>Your template at <code><a href="{{ '/var/www/html/ByNSell/templates/veste/index.html.twig'|file_link(0) }}">templates/veste/index.html.twig</a></code></li>
+    </ul>
+</div>
+{% endblock %}

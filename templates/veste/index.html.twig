@@ -13,12 +13,16 @@
 
     {% for veste in vestes %}
 
- <h1>{{ veste.name }}</h1>
+<ul>
+ <l1>{{ veste.name }}</li>
+   <p> <img class="col-4 movie__poster img-thumbnail" style="background-image: url({{ veste.picture }});" class="images"></p>
+ <li>{{ veste.color }}</li>
+<l1>{{ veste.releaseDate }}</li>
+   <p> <img class="col-4 movie__poster img-thumbnail" style="background-image: url({{ veste.picture }});" class="images"></p>
+ <li>{{ veste.genre }}</li>
 
 
-      <img class="col-4 movie__poster img-thumbnail w-100" style="background-image: url({{ veste.picture }});" class="images">
- <h1>{{ veste.genre }}</h1>
-
+</ul>
     {% endfor %}
    
 

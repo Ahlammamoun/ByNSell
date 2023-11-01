@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use App\Repository\VesteRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass=VesteRepository::class)
@@ -19,6 +20,7 @@ class Veste
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
+     * @Assert\NotBlank
      */
     private $name;
 
@@ -39,6 +41,7 @@ class Veste
 
     /**
      * @ORM\Column(type="date_immutable")
+     * @Assert\NotBlank
      */
     private $releaseDate;
 
@@ -50,6 +53,7 @@ class Veste
     /**
      * @ORM\ManyToOne(targetEntity=Brand::class, inversedBy="vestes")
      * @ORM\JoinColumn(nullable=false)
+     * @Assert\NotBlank
      */
     private $brand;
 

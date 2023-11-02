@@ -21,11 +21,12 @@ class VesteType extends AbstractType
             ->add('genre')
             ->add('picture')
             ->add('releaseDate', DateType::class, [
-               
+        
+                'input' => 'datetime_immutable',
                 'widget' => 'choice',
                 'format' => 'yyyy-MM-dd',
                 'years' => range(date('Y')-30, date('Y')),
-                'input' => 'datetime_immutable',
+                
             ])
             ->add('color')
             ->add('brand', EntityType::class, 
